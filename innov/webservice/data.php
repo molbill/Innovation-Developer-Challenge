@@ -1,0 +1,23 @@
+<?php
+$suppliers = '[{"id":"1001","name":"James Bond","email":"jamesbond@incredulous.com","products":[{"id":"1001","type":"Televisions"},{"id":"1002","type":"Refridgerators"},{"id":"1003","type":"DVD Players"},{"id":"1004","type":"Radio"},{"id":"1009","type":"Watches"},{"id":"1010","type":"Shoes"}]},{"id":"1002","name":"Homer Simpson","email":"homersimpson@springfield.com","products":[{"id":"1005","type":"Books"},{"id":"1006","type":"Paper"},{"id":"1010","type":"Shoes"}]},{"id":"1003","name":"Bruce Wayne","email":"brucewayne@gothamcity.com","products":[{"id":"1001","type":"Televisions"},{"id":"1003","type":"DVD Players"},{"id":"1007","type":"Mobile Phones"},{"id":"1009","type":"Watches"}]},{"id":"1004","name":"Wonder Woman","email":"wonderwoman@wonderworld.com","products":[{"id":"1005","type":"Books"},{"id":"1006","type":"Paper"},{"id":"1007","type":"Mobile Phones"},{"id":"1008","type":"Tablet Phones"},{"id":"1009","type":"Watches"}]},{"id":"1005","name":"Johnny English","email":"henglish@londo.com","products":[{"id":"1001","type":"Televisions"},{"id":"1002","type":"Refridgerators"},{"id":"1003","type":"DVD Players"},{"id":"1004","type":"Radio"},{"id":"1008","type":"Tablet Phones"},{"id":"1009","type":"Watches"},{"id":"1010","type":"Shoes"}]},{"id":"1006","name":"Sheldon Cooper","email":"sheldoncooper@universe.com","products":[{"id":"1001","type":"Televisions"},{"id":"1002","type":"Refridgerators"},{"id":"1003","type":"DVD Players"},{"id":"1006","type":"Paper"},{"id":"1007","type":"Mobile Phones"},{"id":"1008","type":"Tablet Phones"},{"id":"1009","type":"Watches"},{"id":"1010","type":"Shoes"}]}]';
+ 
+ $stockists = '[{"id":"1001","name":"ACME Supplies","lat":-9.65797,"lng":33.91945,"products":[{"id":"1001","qty":40,"supplier":1001},{"id":"1001","qty":40,"supplier":1006},{"id":"1001","qty":10,"supplier":1003},{"id":"1002","qty":5,"supplier":1001},{"id":"1003","qty":110,"supplier":1001},{"id":"1003","qty":110,"supplier":1003},{"id":"1003","qty":110,"supplier":1006},{"id":"1004","qty":23,"supplier":1001},{"id":"1004","qty":23,"supplier":1002},{"id":"1004","qty":23,"supplier":1005},{"id":"1005","qty":230,"supplier":1002},{"id":"1005","qty":230,"supplier":1006},{"id":"1002","qty":230,"supplier":1004},{"id":"1002","qty":230,"supplier":1002},{"id":"1006","qty":123,"supplier":1002},{"id":"1006","qty":123,"supplier":1001},{"id":"1006","qty":123,"supplier":1005},{"id":"1007","qty":20,"supplier":1003},{"id":"1007","qty":210,"supplier":1002},{"id":"1007","qty":120,"supplier":1004},{"id":"1008","qty":220,"supplier":1002},{"id":"1008","qty":30,"supplier":1003},{"id":"1008","qty":40,"supplier":1006},{"id":"1009","qty":50,"supplier":1004},{"id":"1009","qty":50,"supplier":1006},{"id":"1010","qty":12,"supplier":1005},{"id":"1010","qty":10,"supplier":1006}]},{"id":"1002","name":"Waca Waca Traders","lat":-9.45797,"lng":34.91945,"products":[{"id":"1001","qty":30,"supplier":1006},{"id":"1001","qty":30,"supplier":1005},{"id":"1002","qty":15,"supplier":1006},{"id":"1002","qty":95,"supplier":1005},{"id":"1002","qty":95,"supplier":1003},{"id":"1002","qty":95,"supplier":1002},{"id":"1002","qty":75,"supplier":1001},{"id":"1003","qty":65,"supplier":1006},{"id":"1003","qty":65,"supplier":1002},{"id":"1004","qty":27,"supplier":1004},{"id":"1004","qty":27,"supplier":1005},{"id":"1004","qty":27,"supplier":1006},{"id":"1005","qty":75,"supplier":1001},{"id":"1005","qty":75,"supplier":1003},{"id":"1005","qty":75,"supplier":1002},{"id":"1006","qty":13,"supplier":1005},{"id":"1006","qty":13,"supplier":1002},{"id":"1006","qty":13,"supplier":1001},{"id":"1006","qty":13,"supplier":1006},{"id":"1007","qty":20,"supplier":1005},{"id":"1007","qty":25,"supplier":1001},{"id":"1007","qty":80,"supplier":1003},{"id":"1009","qty":60,"supplier":1003},{"id":"1009","qty":35,"supplier":1002},{"id":"1010","qty":16,"supplier":1001},{"id":"1010","qty":100,"supplier":1003}]}]';
+
+ 
+$products = '[{"id":"1001","name":"Televisions"},{"id":"1002","name":"Refridgerators"},{"id":"1003","name":"DVD Players"},{"id":"1004","name":"Radio"},{"id":"1005","name":"Books"},{"id":"1006","name":"Paper"},{"id":"1007","name":"Mobile Phone"},{"id":"1008","name":"Tablet Phones"},{"id":"1009","name":"Watches"},{"id":"1010","name":"Shoes"}]';
+ 
+ $query = isset($_GET['query']) ? $_GET['query'] : "";
+ 
+ switch($query){
+	 case "products":
+		echo $products;
+		break;
+	 case "suppliers":
+		echo $suppliers;
+		break;
+	 case "stockists":
+		echo $stockists;
+		break;
+		
+ }
+?>
